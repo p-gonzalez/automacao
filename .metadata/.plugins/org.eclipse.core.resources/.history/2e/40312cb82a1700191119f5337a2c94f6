@@ -1,0 +1,34 @@
+package temporizadores;
+import javax.annotation.Resource;
+import javax.ejb.Timeout;
+import javax.ejb.TimerService;
+
+
+
+
+public class ExemploTemporizadorProgramatico {
+	@Resource
+	TimerService timerService;
+	
+	public void setTemporizador() {
+		timerService.createTimer(30000, " Novo temporizador. ");
+	}
+	
+	
+	@Timeout
+	public void executeTarefa() {
+		
+		System.out.println("Tarefa executada com sucesso.");
+	}
+	
+	
+	public static void main(String[] args) {
+		
+		ExemploTemporizadorProgramatico t = new ExemploTemporizadorProgramatico();
+	
+	t.setTemporizador();
+	
+	}
+	
+
+}
