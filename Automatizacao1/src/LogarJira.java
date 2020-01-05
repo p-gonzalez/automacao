@@ -15,8 +15,8 @@ public class LogarJira {
 		try {
 			WebDriver driver = new FirefoxDriver();
 			driver.get("https://jira.indra.es/secure/Dashboard.jspa");
-			driver.findElement(By.id("login-form-username")).sendKeys("pgdesouza");
-			driver.findElement(By.id("login-form-password")).sendKeys("#ZJ62H56Y2F");
+			driver.findElement(By.id("login-form-username")).sendKeys("");
+			driver.findElement(By.id("login-form-password")).sendKeys("");
 			driver.findElement(By.id("login")).click();
 			Thread.sleep(8000);
 			
